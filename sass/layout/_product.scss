@@ -1,4 +1,7 @@
 .product {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
   background-color: var(--bg-color-title);
   &__list {
     display: flex;
