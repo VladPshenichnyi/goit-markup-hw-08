@@ -581,13 +581,13 @@ img {
   line-height: 1.87;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--color-hero-title);
   background-color: var(--bg-color-btn);
   width: 200px;
   height: 50px;
-  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
@@ -859,14 +859,34 @@ img {
   display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
-  text-align: left;
+  text-align: center;
   background-color: var(--bg-color-first);
   color: var(--color-text-footer);
   letter-spacing: 0.03em;
 }
 
-.footer-container {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .footer {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    display: flex;
+    flex-wrap: unset;
+    align-content: center;
+    justify-content: space-between;
+  }
 }
 
 .logo-link-footer {
@@ -875,39 +895,66 @@ img {
   font-family: Raleway;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   color: var(--color-text-footer);
   text-decoration: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .logo-link-footer {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
 .address {
-  width: 231px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 9px;
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .address {
+    width: 231px;
+  }
 }
 
 .address-link {
-  display: block;
-  justify-items: flex-start;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-mail-link {
   display: block;
-  margin-bottom: -15px;
+  margin-bottom: -19px;
 }
 
 .footer-tel-link {
   display: block;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-tel-link {
+    margin-bottom: 0;
+  }
 }
 
 .connect {
   display: block;
-  padding-top: 12px;
-  margin-left: 70px;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .connect {
+    padding-top: 12px;
+    margin-left: 70px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .connect {
+    margin-bottom: 0;
+  }
 }
 
 .connect-title {
@@ -918,7 +965,6 @@ img {
   text-transform: uppercase;
   color: var(--color-text-footer);
   margin-bottom: 20px;
-  text-align: left;
 }
 
 .connect-social-link {
@@ -932,12 +978,26 @@ img {
 .subscribe {
   display: block;
   width: 100%;
-  margin-left: 93px;
-  padding-top: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    padding-top: 12px;
+    margin-left: 93px;
+  }
 }
 
 .subscribe-form {
-  display: flex;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-form {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 
 .subscribe-icon {
@@ -953,12 +1013,10 @@ img {
   text-transform: uppercase;
   color: var(--color-text-footer);
   margin-bottom: 20px;
-  text-align: left;
 }
 
 .subscribe input {
   width: 100%;
-  max-width: 358px;
   height: 50px;
   background: transparent;
   outline: none;
@@ -969,7 +1027,20 @@ img {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
-  margin-right: 12px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe input {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe input {
+    max-width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .subscribe input::placeholder {
@@ -982,6 +1053,8 @@ img {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 13px;
   padding-right: 13px;
   font-weight: 700;
@@ -995,6 +1068,13 @@ img {
   height: 50px;
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-btn {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .subscribe-btn:hover, .subscribe-btn:focus {

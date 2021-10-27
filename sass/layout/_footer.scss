@@ -2,12 +2,26 @@
   display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
-  text-align: left;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
   background-color: var(--bg-color-first);
   color: var(--color-text-footer);
   letter-spacing: 0.03em;
   &-container {
-    display: flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-evenly;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: unset;
+      align-content: center;
+      justify-content: space-between;
+    }
   }
 }
 .logo-link-footer {
@@ -16,19 +30,21 @@
   font-family: Raleway;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   color: var(--color-text-footer);
   text-decoration: none;
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 .address {
-  width: 231px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 9px;
+  @media screen and (min-width: 768px) {
+    width: 231px;
+  }
+  margin-bottom: 5px;
   &-link {
-    display: block;
-    justify-items: flex-start;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
   }
@@ -36,15 +52,25 @@
 
 .footer-mail-link {
   display: block;
-  margin-bottom: -15px;
+  margin-bottom: -19px;
 }
 .footer-tel-link {
   display: block;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 .connect {
   display: block;
-  padding-top: 12px;
-  margin-left: 70px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 12px;
+    margin-left: 70px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
   &-title {
     font-weight: 700;
     font-size: 14px;
@@ -53,7 +79,6 @@
     text-transform: uppercase;
     color: var(--color-text-footer);
     margin-bottom: 20px;
-    text-align: left;
   }
 }
 .connect-social-link {
@@ -66,10 +91,19 @@
 .subscribe {
   display: block;
   width: 100%;
-  margin-left: 93px;
-  padding-top: 12px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 12px;
+    margin-left: 93px;
+  }
+
   &-form {
-    display: flex;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: flex-start;
+    }
   }
   &-icon {
     width: 24px;
@@ -85,11 +119,9 @@
   text-transform: uppercase;
   color: var(--color-text-footer);
   margin-bottom: 20px;
-  text-align: left;
 }
 .subscribe input {
   width: 100%;
-  max-width: 358px;
   height: 50px;
   background: transparent;
   outline: none;
@@ -100,7 +132,14 @@
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
-  margin-right: 12px;
+  margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    max-width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 358px;
+    margin-right: 12px;
+  }
 }
 .subscribe input::placeholder {
   font-size: 16px;
@@ -111,6 +150,8 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 13px;
   padding-right: 13px;
   font-weight: 700;
@@ -125,6 +166,10 @@
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
   &:hover,
   &:focus {
     background-color: var(--accent-color-bg);
