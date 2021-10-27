@@ -9,12 +9,12 @@
   padding-top: 16px;
   padding-bottom: 16px;
   @media screen and (min-width: 768px) {
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: 18px;
+    padding-bottom: 19px;
   }
   @media screen and (min-width: 1200px) {
     padding-top: 24px;
-    padding-bottom: 25px;
+    padding-bottom: 24px;
   }
   &-container {
     display: flex;
@@ -29,8 +29,10 @@
     letter-spacing: 0.03em;
     color: var(--first-color-text);
     text-decoration: none;
-    margin-right: 93px;
+    margin-right: 88px;
+
     @media screen and (min-width: 1200px) {
+      margin-right: 93px;
       font-size: 26px;
       line-height: calc(31 / 26);
     }
@@ -79,21 +81,32 @@
 .header-contacts {
   margin-left: auto;
   &-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   @media screen and (max-width: 767px) {
     display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
   }
 }
 
 .header-mail-link {
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 50px;
+  margin-bottom: 10px;
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
 }
 .mail-icon {
   margin-right: 7px;
@@ -103,7 +116,7 @@
 .header-tel-link {
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 }
 
