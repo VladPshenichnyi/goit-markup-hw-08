@@ -1,0 +1,55 @@
+.header > .mobile-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+}
+.menu-carrent {
+  color: var(--accent-color-text);
+}
+.mobile-pages-item {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px / 40px;
+  text-align: left;
+  letter-spacing: 0.02em;
+  color: var(--first-color-text);
+  margin-bottom: 32px;
+}
+.mobile-tel-link {
+  display: block;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--accent-color-text);
+  margin-bottom: 32px;
+}
+.mobile-mail-link {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #757575;
+  margin-bottom: 64px;
+}
+.menu-social-list {
+  display: flex;
+  align-items: start;
+  align-content: flex-end;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color-text);
+}
