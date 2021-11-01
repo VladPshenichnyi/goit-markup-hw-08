@@ -585,7 +585,7 @@ img {
 }
 
 .hero-section {
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-desc.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -619,12 +619,14 @@ img {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  max-width: 360px;
 }
 
 @media screen and (min-width: 1200px) {
   .hero-section__title {
     font-size: 44px;
     line-height: 1.36;
+    max-width: 696px;
   }
 }
 
@@ -1270,7 +1272,6 @@ img {
 }
 
 .header > .mobile-menu {
-  display: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -1284,11 +1285,25 @@ img {
   padding-left: 40px;
 }
 
+@media screen and (max-width: 479px) {
+  .header > .mobile-menu {
+    padding-left: 15px;
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  min-height: 450px;
+}
+
 .menu-carrent {
   color: var(--accent-color-text);
 }
 
 .mobile-pages-item {
+  max-width: 100%;
   font-weight: 500;
   font-size: 40px;
   line-height: 47px / 40px;
@@ -1296,6 +1311,16 @@ img {
   letter-spacing: 0.02em;
   color: var(--first-color-text);
   margin-bottom: 32px;
+}
+
+@media screen and (max-width: 479px) {
+  .mobile-pages-item {
+    font-size: 7vw;
+  }
+}
+
+.mobile-menu-bottom {
+  width: 100%;
 }
 
 .mobile-tel-link {
@@ -1308,6 +1333,12 @@ img {
   margin-bottom: 32px;
 }
 
+@media screen and (max-width: 479px) {
+  .mobile-tel-link {
+    font-size: 6vw;
+  }
+}
+
 .mobile-mail-link {
   display: block;
   font-weight: 500;
@@ -1318,14 +1349,34 @@ img {
   margin-bottom: 64px;
 }
 
+@media screen and (max-width: 479px) {
+  .mobile-mail-link {
+    font-size: 5vw;
+  }
+}
+
 .menu-social-list {
   display: flex;
-  align-items: start;
-  align-content: flex-end;
+  width: 100%;
+}
+
+.menu-social-item {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color-text);
+}
+
+.menu-social-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 479px) {
+  .menu-social-item {
+    font-size: 4vw;
+  }
 }
 /*# sourceMappingURL=main.css.map */
