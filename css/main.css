@@ -429,7 +429,9 @@ img {
 }
 
 .header {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -458,9 +460,11 @@ img {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header-logo {
+  display: block;
   font-family: Raleway;
   font-style: normal;
   font-weight: 700;
@@ -469,7 +473,12 @@ img {
   letter-spacing: 0.03em;
   color: var(--first-color-text);
   text-decoration: none;
-  margin-right: 88px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-logo {
+    margin-right: 88px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -582,6 +591,13 @@ img {
 .tel-icon {
   margin-right: 7px;
   fill: currentColor;
+}
+
+.js-open-menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 0;
 }
 
 .hero-section {
@@ -1272,6 +1288,7 @@ img {
 }
 
 .header > .mobile-menu {
+  display: none;
   position: absolute;
   left: 0;
   top: 0;
