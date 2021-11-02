@@ -24,17 +24,24 @@
     <!--Шапка-->
     <header class="header">
       <div class="header-container container">
+        <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+              <svg width="40" height="40"
+              aria-label="Переключатель мобильного меню">
+                <use class="icon-menu-open " href="./images/sprite.svg#icon-menu-open"></use>
+              </svg>          
+            </button>
         <div class="header-navigation">
           <nav class="nav-link">
             <a class="header-logo" href="./index.html"><span class="logo-left">Web</span>Studio</a>
+            
             <ul class="header-navigation-site list">
               <li class="header-navigation-item item">
                 <a href="./index.html" class="link current">Студия</a>
               </li>
               <li class="header-navigation-item item">
-                <a href="./portfolio.html" class="link">Портфолио</a>
+                <a href="./portfolio.html" class="link ">Портфолио</a>
               </li>
-              <li class="header-navigation__item item"><a href="" class="link">Контакты</a></li>
+              <li class="header-navigation-item item"><a href="" class="link">Контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -64,6 +71,47 @@
           </ul>
         </div>
       </div>
+      <div class="mobile-menu js-menu-container">  
+        <div class="container">
+          <button type="button" class="menu-toggle js-close-menu">
+            <svg class="icon-menu-close " width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use href="./images/sprite.svg#icon-menu-close"></use>
+            </svg>
+          </button>      
+          <div class="menu-pages">
+            <ul class="mobile-pages-list list">
+              <li class="mobile-pages-item item">
+                <a href="./index.html" class="link menu-carrent">Студия</a>
+              </li>
+              <li class="mobile-pages-item item">
+                <a href="./portfolio.html" class="link ">Портфолио</a>
+              </li>
+              <li class="mobile-pages-item item"><a href="" class="link">Контакты</a></li>
+            </ul>
+          </div>
+            <div class="mobile-menu-bottom"> </button>
+              <div class="mobile-menu-contacts">
+                <ul class="mobile-contacts-list list">
+                  <li class="mobile-contacts-item item">
+                    <a href="tel:+380961111111" class="link mobile-tel-link">+38 096 111 11 11</a>
+                  </li>
+                  <li class="mobile-contacts-item mail-contacts item">
+                    <a href="mailto:info@devstudio.com" class="mobile-mail-link link">info@devstudio.com</a>
+                  </li>                
+                </ul>
+              </div>
+              <div class="mobile-menu-social">
+                <ul class="menu-social-list list">
+                  <li class="menu-social-item item"><a href="" class="menu-social-link link">Instagram</a></li>
+                  <li class="menu-social-item item"><a href="" class="menu-social-link link">Twitter</a></li>
+                  <li class="menu-social-item item"><a href="" class="menu-social-link link">Facebook</a></li>
+                  <li class="menu-social-item item"><a href="" class="menu-social-link link">LinkedIn</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          </div> 
+        </div>
     </header>
     <!--Тело сайта-->
     <main class="main">
@@ -506,6 +554,12 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
